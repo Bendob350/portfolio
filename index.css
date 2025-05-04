@@ -1,16 +1,88 @@
-body {
-    background: radial-gradient(circle, #b3d9ff 0%, #3399ff 50%, #003366 100%);
-    height: 100vh;
+/* --- Reset & base --- */
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 0;
   }
-  .top-bar {
-    width: 100%;
-    height: 50px;
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #111;
+    background: #fafafa;
+  }
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  /* --- Header --- */
+  header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  .contact {
+    margin-top: 0.5rem;
+    color: #555;
+  }
+  
+  /* --- Sections --- */
+  section {
+    margin: 2rem 0;
+  }
+  section h2 {
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  section ul {
+    list-style: none;
+  }
+  section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* --- Separators --- */
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2rem 0;
+  }
+  
+  /* --- Key Competencies columns --- */
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .columns ul li {
+    position: relative;
+    padding-left: 1.2rem;
+  }
+  .columns ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0073e6;
+  }
+  
+  /* --- Two-column layout for Skills & Languages --- */
+  .two-col {
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .two-col section {
+    flex: 1;
+  }
+  .two-col section h2 {
+    border-left: 4px solid #0073e6;
+    padding-left: 0.5rem;
+  }
+  
+  /* --- Utility --- */
+  strong {
+    color: #0073e6;
   }
   
